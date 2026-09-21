@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoMove | Acceso</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="marca">
+            <img src="imagenes/logo_geomove.png" alt="Logo GeoMove">
+            <span>GeoMove</span>
+        </div>
+
+        <div class="eslogan">
+            Tu seguridad, en movimiento
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+
+        <div class="decoracion-pin pin-izquierdo">●</div>
+        <div class="decoracion-ruta"></div>
+
+        <section class="tarjeta-login">
+
+            <img class="logo-login"
+                 src="imagenes/logo_geomove.png"
+                 alt="Logo GeoMove">
+
+            <h1>Geo<span>Move</span></h1>
+            <h2>Gestión de desplazamientos</h2>
+
+            <p class="descripcion">
+                Accede a tu cuenta para gestionar y consultar
+                tus desplazamientos de manera segura y eficiente.
+            </p>
+
+            <form id="formLogin">
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email"
+                           id="correo"
+                           name="correo"
+                           placeholder="Ingresa tu correo electrónico"
+                           required>
+                </div>
+
+                <div class="campo">
+                    <label for="contrasena">Contraseña</label>
+
+                    <div class="campo-contrasena">
+                        <input type="password"
+                               id="contrasena"
+                               name="contrasena"
+                               placeholder="Ingresa tu contraseña"
+                               required>
+
+                        <button type="button"
+                                id="btnMostrar"
+                                aria-label="Mostrar contraseña">
+                            Ver
+                        </button>
+                    </div>
+                </div>
+
+                <div class="opciones">
+                    <label class="recordar">
+                        <input type="checkbox" id="recordar">
+                        <span>Recordar sesión</span>
+                    </label>
+
+                    <a href="#" class="enlace">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <a href="dashboard.html" class="btn-ingresar">
+                    Iniciar sesión
+                </a>
+
+            </form>
+
+            <div class="separador"></div>
+
+            <p class="contacto">
+                ¿No tienes una cuenta?
+                <a href="#" class="enlace">Contacta con el administrador</a>
+            </p>
+
+        </section>
+    </main>
+
+    <footer>
+        GeoMove © 2026 &nbsp;|&nbsp; Sistema de gestión de desplazamientos
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
