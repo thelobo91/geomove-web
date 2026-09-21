@@ -1,0 +1,718 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #1478c9;
+    --azul-oscuro: #24527a;
+    --verde: #20a957;
+    --verde-claro: #75cf87;
+    --fondo: #f4f8fb;
+    --texto: #244463;
+    --borde: #d5e1ec;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 12% 55%, rgba(20, 120, 201, 0.09) 0 95px, transparent 96px),
+        linear-gradient(135deg, #ffffff 0%, var(--fondo) 100%);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+/* Encabezado */
+
+.encabezado {
+    height: 105px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2ebf2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+.marca img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.eslogan {
+    color: #6c86a0;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.eslogan::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--verde);
+}
+
+/* Contenedor */
+
+.contenedor-principal {
+    min-height: calc(100vh - 165px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 48px 20px;
+}
+
+/* Tarjeta */
+
+.tarjeta-login {
+    width: min(590px, 100%);
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #e3edf5;
+    border-radius: 18px;
+    padding: 42px 46px;
+    box-shadow: 0 18px 45px rgba(39, 83, 119, 0.13);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-login {
+    width: 92px;
+    height: 92px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.tarjeta-login h1 {
+    font-size: 48px;
+    color: var(--azul);
+    margin-bottom: 4px;
+}
+
+.tarjeta-login h1 span {
+    color: var(--verde);
+}
+
+.tarjeta-login h2 {
+    font-size: 21px;
+    color: var(--azul-oscuro);
+    margin-bottom: 18px;
+}
+
+.descripcion {
+    color: #7188a0;
+    line-height: 1.6;
+    margin: 0 auto 28px;
+    max-width: 450px;
+}
+
+/* Formulario */
+
+form {
+    text-align: left;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: var(--azul-oscuro);
+}
+
+.campo input[type="email"],
+.campo input[type="password"],
+.campo input[type="text"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 15px;
+    outline: none;
+    color: var(--texto);
+    background: #ffffff;
+    transition: 0.2s;
+}
+
+.campo input:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(20, 120, 201, 0.10);
+}
+
+.campo-contrasena {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.campo-contrasena input {
+    padding-right: 58px !important;
+}
+
+.campo-contrasena button {
+    position: absolute;
+    right: 10px;
+    border: 0;
+    background: transparent;
+    color: var(--azul);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 4px 0 25px;
+    font-size: 14px;
+}
+
+.recordar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.recordar input {
+    accent-color: var(--azul);
+}
+
+.enlace {
+    color: #0877d1;
+    text-decoration: none;
+}
+
+.enlace:hover {
+    text-decoration: underline;
+}
+
+/* Botón */
+
+.btn-ingresar {
+    width: 100%;
+    padding: 12px;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: #123c69;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-ingresar:hover {
+    background-color: #0e3155;
+}
+
+.separador {
+    height: 1px;
+    background: #e4ebf1;
+    margin: 28px 0;
+}
+
+.contacto {
+    font-size: 14px;
+    color: #7188a0;
+}
+
+/* Decoración */
+
+.decoracion-pin {
+    position: absolute;
+    color: rgba(20, 120, 201, 0.10);
+    font-size: 180px;
+    left: 4%;
+    top: 28%;
+    z-index: 0;
+}
+
+.decoracion-ruta {
+    position: absolute;
+    width: 310px;
+    height: 190px;
+    border-top: 15px solid rgba(32, 169, 87, 0.13);
+    border-radius: 50%;
+    right: -35px;
+    bottom: 50px;
+    transform: rotate(-20deg);
+    z-index: 0;
+}
+
+/* Pie */
+
+footer {
+    text-align: center;
+    color: #7890a8;
+    font-size: 13px;
+    padding: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .encabezado {
+        height: auto;
+        padding: 18px 20px;
+    }
+
+    .marca {
+        font-size: 23px;
+    }
+
+    .marca img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .eslogan {
+        display: none;
+    }
+
+    .contenedor-principal {
+        padding: 30px 15px;
+    }
+
+    .tarjeta-login {
+        padding: 32px 24px;
+    }
+
+    .tarjeta-login h1 {
+        font-size: 40px;
+    }
+
+    .tarjeta-login h2 {
+        font-size: 18px;
+    }
+
+    .opciones {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .decoracion-pin,
+    .decoracion-ruta {
+        display: none;
+    }
+}
+
+/* =====================================================
+   DASHBOARD GEOMOVE
+   ===================================================== */
+
+/* Encabezado */
+.encabezado {
+    height: 70px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Marca GeoMove */
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #123c69;
+}
+
+.marca img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Usuario */
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #374151;
+    font-weight: 500;
+}
+
+/* Información del usuario */
+.datos-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.3;
+}
+
+.datos-usuario strong {
+    color: #123c69;
+    font-size: 14px;
+}
+
+.datos-usuario span {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.icono-usuario {
+    font-size: 24px;
+}
+
+/* Contenedor principal */
+.dashboard {
+    display: flex;
+    min-height: calc(100vh - 70px);
+    background: #f5f7fa;
+}
+
+/* Menú lateral */
+.menu-lateral {
+    width: 240px;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    padding: 25px 15px;
+}
+
+/* Enlaces del menú */
+.menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    color: #374151;
+    padding: 14px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.menu-lateral a:hover {
+    background: #eef6ff;
+    color: #123c69;
+}
+
+/* Opción activa */
+.menu-lateral .menu-activo {
+    background: #e8f2ff;
+    color: #123c69;
+    font-weight: 600;
+}
+
+/* Contenido */
+.contenido-dashboard {
+    flex: 1;
+    padding: 40px;
+}
+
+/* Bienvenida */
+.bienvenida h1 {
+    margin: 0 0 10px;
+    color: #123c69;
+    font-size: 30px;
+}
+
+.bienvenida p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* Tarjeta del módulo */
+.tarjeta-modulo {
+    margin-top: 35px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* Icono */
+.icono-modulo {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    background: #e8f2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+/* Información */
+.informacion-modulo h2 {
+    margin: 0 0 10px;
+    color: #123c69;
+}
+
+.informacion-modulo p {
+    margin: 0 0 20px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Botón */
+.boton-modulo {
+    display: inline-block;
+    text-decoration: none;
+    background: #123c69;
+    color: #ffffff;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.boton-modulo:hover {
+    background: #0d2f52;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+
+    .encabezado {
+        padding: 0 15px;
+    }
+
+    .usuario span:last-child {
+        display: none;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: auto;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 10px;
+    }
+
+    .menu-lateral nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .menu-lateral a {
+        white-space: nowrap;
+    }
+
+    .contenido-dashboard {
+        padding: 25px 15px;
+    }
+
+    .tarjeta-modulo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =====================================================
+   GESTIÓN DE DESPLAZAMIENTOS
+   ===================================================== */
+
+.contenido-desplazamientos {
+    min-height: calc(100vh - 70px);
+    background: #f5f7fa;
+    padding: 40px;
+}
+
+/* Título de la sección */
+.titulo-seccion {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.titulo-seccion h1 {
+    margin: 0 0 8px;
+    color: #123c69;
+    font-size: 30px;
+}
+
+.titulo-seccion p {
+    margin: 0;
+    color: #6b7280;
+}
+
+/* Tarjeta principal */
+.tarjeta-desplazamiento {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* Cabecera */
+.cabecera-desplazamiento h2 {
+    margin: 0 0 5px;
+    color: #123c69;
+    font-size: 22px;
+}
+
+.cabecera-desplazamiento p {
+    margin: 0;
+    color: #6b7280;
+}
+
+/* Periodo */
+.periodo {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.fecha {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fecha span {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.fecha strong {
+    color: #123c69;
+    font-size: 17px;
+}
+
+.separador-fechas {
+    color: #123c69;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Destinos */
+.seccion-destinos {
+    margin-top: 30px;
+}
+
+.seccion-destinos h3 {
+    margin-bottom: 20px;
+    color: #123c69;
+}
+
+/* Lista vertical */
+.lista-destinos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Línea vertical */
+.lista-destinos::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background: #d9dee5;
+}
+
+/* Destino */
+.destino-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 10px 0;
+}
+
+/* Punto */
+.punto-destino {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+/* Botón destino */
+.boton-destino {
+    width: 100%;
+    max-width: 400px;
+    padding: 14px 18px;
+    background: #ffffff;
+    border: 1px solid #d9dee5;
+    border-radius: 9px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.boton-destino:hover {
+    border-color: #123c69;
+    background: #f8fbff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+
+    .contenido-desplazamientos {
+        padding: 25px 15px;
+    }
+
+    .tarjeta-desplazamiento {
+        padding: 20px;
+    }
+
+    .periodo {
+        gap: 15px;
+    }
+
+    .boton-destino {
+        max-width: none;
+    }
+}
